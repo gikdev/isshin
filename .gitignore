@@ -1,6 +1,5 @@
-!.env.example
-!.vscode/
 .DS_Store
+.tanstack/
 .env*
 .idea/
 *.local
@@ -19,3 +18,5 @@ npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+!.env.example
+!.vscode/

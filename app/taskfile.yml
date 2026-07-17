@@ -1,0 +1,70 @@
+# https://taskfile.dev
+version: '3'
+
+dotenv: ['.env']
+
+vars:
+  # GREENING: "Hello"
+
+tasks:
+  default: task --list-all
+
+  dev:
+    aliases: [d]
+    cmds:
+      - vp dev --host
+
+  preview: vp preview --host
+
+  install: vp install
+
+  setup:
+    cmds:
+      - task: install
+
+  build: vp build
+
+  repo:nuke:
+    cmds:
+      - rm -rf node_modules/
+      - rm -rf .tanstack/
+      - rm -rf dist/
+
+  publish:
+    cmds:
+      - task: quality:type-check
+      - task: app:build
+
+  typecheck:
+    aliases: [t]
+    cmds:
+      - vpr tsc -b
+
+  format:
+    aliases: [f]
+    cmds:
+      - vp fmt . --write
+
+  lint:
+    aliases: [l]
+    cmds:
+      - vp lint
+
+  lint:fix:
+    aliases: [lf]
+    cmds:
+      - vp lint --fix
+
+  check:
+    aliases: [c]
+    cmds:
+      - vp check
+
+  check:fix:
+    aliases: [cf]
+    cmds:
+      - vp check --fix
+
+  test: vp test
+
+  test:watch: vp test --watch
