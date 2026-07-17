@@ -21,6 +21,7 @@ tasks:
   setup:
     cmds:
       - task: install
+      - task: i18n
 
   build: vp build
 
@@ -44,6 +45,15 @@ tasks:
     aliases: [f]
     cmds:
       - vp fmt . --write
+
+  i18n:
+    cmds:
+      - vpr typesafe-i18n --no-watch
+
+  i18n:watch:
+    aliases: [iw]
+    cmds:
+      - vpr typesafe-i18n
 
   lint:
     aliases: [l]

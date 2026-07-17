@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vp dev",
     "build": "tsc -b && vp build",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "typesafe-i18n": "typesafe-i18n"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
@@ -20,6 +21,7 @@
     "tailwind-merge": "^3.6.0",
     "tailwind-variants": "^3.2.2",
     "tailwindcss": "^4.3.3",
+    "typesafe-i18n": "^5.27.1",
     "uuid": "^14.0.1",
     "zod": "^4.4.3"
   },

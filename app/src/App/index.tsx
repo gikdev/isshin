@@ -1,16 +1,22 @@
 import { RouterProvider } from '@tanstack/react-router'
 import { StrictMode } from 'react'
 
+import { I18nProvider } from '#/features/i18n/I18nProvider'
+import { useHandleI18nChange } from '#/features/i18n/useHandleI18nChange'
+
+import './configs/styles.css'
 import { router } from './configs/router'
 import { ToastProvider } from './configs/ToastProvider'
 
-import './configs/styles.css'
-
 export function App() {
+  useHandleI18nChange()
+
   return (
     <StrictMode>
-      <RouterProvider router={router} />
-      <ToastProvider />
+      <I18nProvider>
+        <RouterProvider router={router} />
+        <ToastProvider />
+      </I18nProvider>
     </StrictMode>
   )
 }
