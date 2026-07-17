@@ -1,0 +1,34 @@
+{
+  "name": "isshin",
+  "version": "0.0.0",
+  "description": "Your focus companion.",
+  "scripts": {
+    "cz": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gikdev/isshin.git"
+  },
+  "author": "Mohammad Mahdi Bahrami",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gikdev/isshin/issues"
+  },
+  "homepage": "https://github.com/gikdev/isshin#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "version": "1.3.14",
+      "onFail": "download"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.2",
+    "cz-conventional-changelog": "^3.3.0"
+  }
+}

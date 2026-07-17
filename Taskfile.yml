@@ -6,4 +6,27 @@ vars:
   # GREETING: Hello, World!
 
 tasks:
-  default: task --list-all
+  meta:list:
+    aliases: [default, list, l]
+    desc: List all tasks
+    cmds:
+      - task --list-all
+
+  repo:setup:
+    aliases: [setup]
+    desc: Setup
+    cmds:
+      - vp install
+
+  git:commit:
+    aliases: [commit, cm]
+    desc: Launch interactive commit
+    cmds:
+      - vpr cz
+
+  git:commit:all:
+    aliases: [commit:all, cma]
+    desc: Stage everything and launch interactive commit
+    cmds:
+      - git add -A
+      - vpr cz
